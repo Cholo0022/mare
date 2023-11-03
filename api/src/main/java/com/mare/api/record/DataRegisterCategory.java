@@ -1,4 +1,9 @@
 package com.mare.api.record;
 
-public record DataRegisterCategory(Long id, String name) {
+import jakarta.validation.constraints.NotBlank;
+
+public record DataRegisterCategory(
+        Long id,
+        @NotBlank
+        String name) {
 }
