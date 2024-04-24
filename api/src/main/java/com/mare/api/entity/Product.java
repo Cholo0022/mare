@@ -14,6 +14,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @EqualsAndHashCode
+
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
