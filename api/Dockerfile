@@ -1,4 +1,3 @@
-# Dockerfile
 # Usa una imagen de Java como base
 FROM openjdk:17-jdk-slim
 
@@ -13,5 +12,6 @@ ENV LANG C.UTF-8
 
 # Ejecuta la aplicación Spring Boot
 CMD ["java", "-classpath", "/app/classes", "com.mare.api.ApiApplication"]
+
 
 
