@@ -3,6 +3,7 @@ package com.mare.api.entity;
 import com.mare.api.record.DataRegisterProduct;
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.math.BigDecimal;
 import java.time.Clock;
 import java.time.LocalDate;
@@ -44,5 +45,49 @@ public class Product {
         this.featured = dataRegisterProduct.featured();
         this.category = new Category(dataRegisterProduct.category());
         this.productEntry = LocalDate.now(Clock.systemDefaultZone());
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getWaist() {
+        return waist;
+    }
+
+    public Boolean getFeatured() {
+        return featured;
+    }
+
+    public LocalDate getProductEntry() {
+        return productEntry;
+    }
+
+    public Category getCategory() {
+        return category;
     }
 }

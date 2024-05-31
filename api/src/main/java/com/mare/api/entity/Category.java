@@ -18,7 +18,7 @@ public class Category {
     private Long id;
     private String name;
 
-    public Category(DataRegisterCategory dataRegisterCategory){
+    public Category(DataRegisterCategory dataRegisterCategory) {
         this.id = dataRegisterCategory.id();
         this.name = dataRegisterCategory.name();
     }

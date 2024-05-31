@@ -21,13 +21,13 @@ public class CategoryController {
     private ICategoryService iCategoryService;
 
     @GetMapping("/categories")
-    public ResponseEntity<List<Category>> getAll(){
+    public ResponseEntity<List<Category>> getAll() {
         List<Category> categories = iCategoryService.getAll();
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
     @GetMapping("/categories/{id}")
-    public ResponseEntity<Category> getById(@PathVariable String id){
+    public ResponseEntity<Category> getById(@PathVariable String id) {
         Long categoryId = Long.parseLong(id);
         Category category = iCategoryService.getById(categoryId);
         return new ResponseEntity<>(category, HttpStatus.OK);
@@ -37,7 +37,7 @@ public class CategoryController {
     public ResponseEntity<Void> remove(@PathVariable String id) {
         Long categoryId = Long.parseLong(id);
         iCategoryService.remove(categoryId);
-        return  new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PostMapping("/categories")

@@ -22,12 +22,12 @@ public class UsuarioController {
     UsuarioServiceImpl usuarioService;
 
     @PostMapping("/register")
-    public ResponseEntity<RespStandart> registroUsuario(@RequestBody UsuarioDto usuarioDto){
-        return new ResponseEntity<>(usuarioService.registrarUsuario(usuarioDto),  HttpStatus.OK);
+    public ResponseEntity<RespStandart> registroUsuario(@RequestBody UsuarioDto usuarioDto) {
+        return new ResponseEntity<>(usuarioService.registrarUsuario(usuarioDto), HttpStatus.OK);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<DataUser> loginUsuario(@RequestBody UsuarioLoginDto usuarioLoginDto){
-        return new ResponseEntity<>(usuarioService.loginUsuario(usuarioLoginDto),  HttpStatus.OK);
+    public ResponseEntity<DataUser> loginUsuario(@RequestBody UsuarioLoginDto usuarioLoginDto) {
+        return new ResponseEntity<>(usuarioService.loginUsuario(usuarioLoginDto), HttpStatus.OK);
     }
 }
